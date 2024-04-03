@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../public/style/home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <div>
+      <!-- Form for adding a new task -->
+      <div class="form">
+        <input class="title-input" type="text" name="title" />
+        <!-- Input field for task title -->
+        <button class="btn-add">add</button>
+        <br />
+        <!-- Submit button -->
+        <label for="completed">Is completed?</label>
+        <!-- Checkbox label -->
+        <input
+          class="checkCompleted"
+          id="completed"
+          type="checkbox"
+          name="completed"
+          value="true"
+        />
+        <!-- Checkbox input -->
+      </div>
+      <br />
+    </div>
+    <!-- List of tasks -->
+    <div class="filterCompleted">
+      <label for="all">All</label>
+      <input type="radio" name="status" id="allStatus" checked />
+      <label for="all">Completed</label>
+      <input type="radio" name="status" id="CommpletedStatus"  />
+      <label for="all">In progress</label>
+      <input type="radio" name="status" id="inProgressStatus" />
+    </div>
+    <ul style="display: none" id="list"></ul>
+    <h1 style="display: none" id="task404">task not found</h1>
+    <div id="pageControllers" style="display: none;">
+      <button  id="prevButton">&LeftArrow;;</button>
+      <span id="pageLabel"></span>
+      <button id="nextButton">&RightArrow;;</button>
+    </div>
+    <!-- Include Axios library and custom script -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../public/js/script.js"></script>
+  </body>
+</html>
